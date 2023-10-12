@@ -59,6 +59,14 @@ footer {
     box-shadow ; */
 }
 
+.even {
+    font-weight: bold;
+}
+
+.odd {
+    color: red !important;
+}
+
 footer, nav.navbar {
     background-color: var(--rc-primary-color);
     color: var(--rc-light-color);

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APP NAME: By Rebecca Copeland</title>
+    <title>SkipSplash: By Rebecca Copeland</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -30,7 +30,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="/index.html">
                 <img src="/img/Rebecca-Copeland-logo-white.svg" height="30" />
-                APP NAME
+                SkipSplash
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -50,7 +50,7 @@
                     </li>
                     <li class="nav-item">
                         <!-- CHANGE ME TO THE REAL REPO LINK -->
-                        <a class="nav-link" href="https://github.com/rebcop">The Repo</a>
+                        <a class="nav-link" href="https://github.com/rebcop/SkipSplash-Hundo">The Repo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://magical-bunny-4b3c2b.netlify.app/">Portfolio</a>
@@ -67,12 +67,49 @@
     </nav>
 
     <main class="container py-3">
-        <h1>APP UI GOES HERE</h1>
-        <input class="form-control my-3" placeholder="Enter a message" type="text" style="width: 10rem" name="message"
-            id="message" />
+        <div class="row gy-2 row-cols-1 row-cols-md-2 border-start border-end border-2">
+            <div class="col ">
+                <h1 class="fw-bold mb-3">SkipSplash: A coding Challenge</h1>
+                <p class="lead">Live life one loop at a time! Hundo is a
+                    JavaScript coding exercise using loops. Write a program which displays
+                    the numbers from 1 to 100. Then, display the even numbers in <strong>BOLD</strong>.
+                </p>
+                <h2 class="mt-5 border-bottom border-2">Instructions</h2>
+                <p>
+                    Enter a start value and an end value. Press the button, and the
+                    numbers in that range will appear.
+                </p>
 
-        <button id="btnSubmit" class="btn btn-primary">Display Message</button>
+            </div>
+            <div class="col">
+                <h2 class="border-bottom border-2">Enter your values below</h2>
+                <form action="#" class="row g-3">
+                    <div class="col">
+                        <label class="form-label" for="startValue">Start Value</label>
+                        <input class="form-control" id="startValue" name="startValue" type="number"
+                            placeholder="Start Number" value="0" />
+                    </div>
+                    <div class="col">
+                        <label class="form-label" for="endValue">End Value</label>
+                        <input class="form-control" id="endValue" name="endValue" type="number" placeholder="End Number"
+                            value="100" />
+                    </div>
+                    <div class="col-12 text-end">
+                        <button class="btn btn-dark" id="btnSubmit" type="button">
+                            Display the SkipSplash!
+                        </button>
+                    </div>
+                </form>
+                <h2 class="mt-5 border-bottom border-2">Results</h2>
+                <table class="table table-striped">
+                    <tbody id="results">
+                        <!-- numbers go here! -->
+                        <!-- e.g. <tr><td>1</td></tr> -->
 
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </main>
 
     <footer class="py-3">
@@ -104,13 +141,13 @@
 
     <!-- Custom JS -->
     <script src="/js/site.js"></script>
-    
+
     <script>
         // get the button on the page and assign it to a variable
         let button = document.getElementById('btnSubmit');
 
-        // tell the button to run our displayMessage function when clicked
-        button.addEventListener('click', displayMessage);
+        // tell the button to run our getValues function when clicked
+        button.addEventListener('click', getValues);
 
     </script>
 </body>
