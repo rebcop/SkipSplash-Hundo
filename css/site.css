@@ -1,0 +1,87 @@
+:root {
+    /* --rc-primary-color: #001e43; */
+    /* --rc-secondary-color: #ff993b; */
+    
+
+    --rc-primary-color: #2a0e0e;
+    /* --rc-primary-color: #f4dcdc; --rc-sunset-100 theme-100 or theme-200 // theme-800 or theme-900 */
+    --rc-secondary-color: #d35f5f; /* --rc-sunset-core  theme-core or theme-500 or theme-600 */
+    --rc-light-color: #dfe3e4;
+    /* --rc-dark-color: #2a0e0e; --rc-sunset-900 */
+    --rc-dark-color: #1b1b1b;
+}
+
+
+/* #region sticky footer */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    flex-shrink: 1;
+}
+
+/* #endregion sticky footer */
+
+.navbar-nav .nav-link {
+    transition: color 0.2s ease-in;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: var(--rc-secondary-color);
+}
+
+.devicons {
+    font-size: 3rem;
+}
+
+.bi-check-square-fill {
+    color: var(--rc-secondary-color);
+}
+
+.app-logo {
+    max-width: 400px;
+    /* IF NEEDED */
+    /* border-radius: 15px;
+    box-shadow ; */
+}
+
+footer, nav.navbar {
+    background-color: var(--rc-primary-color);
+    color: var(--rc-light-color);
+}
+
+footer .bi {
+    font-size: 2rem;
+    padding-left: .5rem;
+    color: var(--rc-light-color);
+    transition: color 0.25s ease-in;
+}
+
+footer .bi:hover {
+    color: var(--rc-secondary-color);
+}
+
+/* #region Modify Bootstrap Components */
+.btn-outline-primary {
+    --bs-btn-color: var(--rc-primary-color);
+    --bs-btn-border-color: var(--rc-primary-color);
+    --bs-btn-hover-bg: var(--rc-primary-color);
+    --bs-btn-hover-border-color: var(--rc-primary-color);
+    --bs-btn-active-bg: var(--rc-primary-color);
+    --bs-btn-active-border-color: var(--rc-primary-color);
+}
+/* #endregion Modify Bootstrap Components */
