@@ -18,13 +18,14 @@
 
     <!-- Custom CSS -->
     <link href="/css/site.css" rel="stylesheet" />
+    <link href="/css/themes.css" rel=stylesheet />
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/img/rebeccacopeland.png" type="image/x-icon" />
 
 </head>
 
-<body>
+<body data-rc-theme="sunset">
 
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
@@ -83,7 +84,7 @@
             </div>
             <div class="col">
                 <h2 class="border-bottom border-2">Enter your values below</h2>
-                <form action="#" class="row g-3">
+                <form id="skipSplashForm" action="#" class="row g-3">
                     <div class="col">
                         <label class="form-label" for="startValue">Start Value</label>
                         <input class="form-control" id="startValue" name="startValue" type="number"
@@ -94,11 +95,17 @@
                         <input class="form-control" id="endValue" name="endValue" type="number" placeholder="End Number"
                             value="100" />
                     </div>
+                    <div class="col">
+                        <label class="form-label" for="filterNumber">Show Multiples of</label>
+                        <input class="form-control" id="filterNumber" name="filterNumber" type="number"
+                            placeholder="Filter Number" value="1" />
+                    </div>
                     <div class="col-12 text-end">
                         <button class="btn btn-dark" id="btnSubmit" type="button">
                             Display the SkipSplash!
                         </button>
                     </div>
+
                 </form>
                 <h2 class="mt-5 border-bottom border-2">Results</h2>
                 <table class="table table-striped">

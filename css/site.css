@@ -1,13 +1,8 @@
 :root {
-    /* --rc-primary-color: #001e43; */
-    /* --rc-secondary-color: #ff993b; */
-    
+    /* fonts */
 
-    --rc-primary-color: #2a0e0e;
-    /* --rc-primary-color: #f4dcdc; --rc-sunset-100 theme-100 or theme-200 // theme-800 or theme-900 */
-    --rc-secondary-color: #d35f5f; /* --rc-sunset-core  theme-core or theme-500 or theme-600 */
+    /* colors */
     --rc-light-color: #dfe3e4;
-    /* --rc-dark-color: #2a0e0e; --rc-sunset-900 */
     --rc-dark-color: #1b1b1b;
 }
 
@@ -23,7 +18,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 
 main {
     flex-grow: 1;
@@ -41,7 +35,11 @@ footer {
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
-    color: var(--rc-secondary-color);
+    color: var(--rc-theme-200);
+}
+
+.navbar .navbar-brand {
+    color: var(--rc-light-color);
 }
 
 .devicons {
@@ -49,7 +47,7 @@ footer {
 }
 
 .bi-check-square-fill {
-    color: var(--rc-secondary-color);
+    color: var(--rc-theme-400);
 }
 
 .app-logo {
@@ -68,7 +66,7 @@ footer {
 }
 
 footer, nav.navbar {
-    background-color: var(--rc-primary-color);
+    background-color: var(--rc-theme-900);
     color: var(--rc-light-color);
 }
 
@@ -80,16 +78,26 @@ footer .bi {
 }
 
 footer .bi:hover {
-    color: var(--rc-secondary-color);
+    color: var(--rc-theme-400);
 }
 
 /* #region Modify Bootstrap Components */
 .btn-outline-primary {
-    --bs-btn-color: var(--rc-primary-color);
-    --bs-btn-border-color: var(--rc-primary-color);
-    --bs-btn-hover-bg: var(--rc-primary-color);
-    --bs-btn-hover-border-color: var(--rc-primary-color);
-    --bs-btn-active-bg: var(--rc-primary-color);
-    --bs-btn-active-border-color: var(--rc-primary-color);
+    --bs-btn-color: var(--rc-theme-900);
+    --bs-btn-border-color: var(--rc-theme-900);
+    --bs-btn-hover-bg: var(--rc-theme-900);
+    --bs-btn-hover-border-color: var(--rc-theme-900);
+    --bs-btn-active-bg: var(--rc-theme-900);
+    --bs-btn-active-border-color: var(--rc-theme-900);
 }
+
+.btn-primary {
+    --bs-btn-bg: var(--rc-theme-400);
+    --bs-btn-border-color: var(--rc-theme-400);
+    --bs-btn-hover-bg: var(--rc-theme-500);
+    --bs-btn-hover-border-color: var(--rc-theme-500);
+    --bs-btn-active-bg: var(--rc-theme-600);
+    --bs-btn-active-border-color: var(--rc-theme-600);
+}
+
 /* #endregion Modify Bootstrap Components */

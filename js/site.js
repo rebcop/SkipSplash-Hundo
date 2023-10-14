@@ -7,6 +7,9 @@ function getValues() {
     // get the end number
     let endNumber = document.getElementById('endValue').value; // "100"
 
+    // get the number to filter out multiples of
+    let filterNumber = document.getElementById('filterNumber').value; // "1"
+
     // alert('start number is: ' + startNumber);
     // alert('end number is: ' + endNumber);
 
@@ -16,7 +19,8 @@ function getValues() {
 
     if (Number.isInteger(startNumber) && Number.isInteger(endNumber) && startNumber < endNumber) {
         // generate the range of numbers
-        let generatedNumbers = generateValues(startNumber, endNumber);
+
+        let generatedNumbers = generateValues(startNumber, endNumber, filterNumber);
 
         displayValues(generatedNumbers);
 
@@ -34,7 +38,7 @@ function getValues() {
 }
 
 // generate a list of all numbers between the start and end
-function generateValues(start, end) {
+function generateValues(start, end, filter) {
 
     // create a variable that can hold a bunch of numbers
     let numbers = [];
@@ -43,8 +47,14 @@ function generateValues(start, end) {
     // add one to that number, then add THAT to the variable
     // keep adding one and putting it into the variable UNTIL we get to the end number
     for (let n = start; n <= end; n = n + 1) {
-        // code goes here...
-        numbers.push(n);
+
+        // Check if number is a multiple of filterNumber
+        if (n % filter == 0) {
+            // If it is a multiple add number to array
+            numbers.push(n);
+        }
+
+        
     }
     
     // somehow tell displayValues to show those numbers???
